@@ -3,12 +3,19 @@ import { Button, Paper, TextField } from "@mui/material";
 import Todo from "../models/todo";
 import { TodosContext } from "../store/todos-context";
 const NewTodo: React.FC = () => {
-    const todoCtx = useContext(TodosContext)
+    const todoCtx = useContext(TodosContext);
     const newTodoName = useRef<HTMLInputElement>(null);
     const newTodoDesc = useRef<HTMLInputElement>(null);
 
     const handleAddTodo = (e: React.FormEvent) => {
         e.preventDefault();
+        if (
+            !newTodoDesc.current!.value.trim().length &&
+            !newTodoName.current!.value.trim().length
+        ) {
+            return;
+        }
+
         const newTodo = new Todo(
             newTodoName.current!.value,
             newTodoDesc.current!.value
@@ -36,7 +43,6 @@ const NewTodo: React.FC = () => {
                     fullWidth
                     sx={{ mb: 2 }}
                     inputRef={newTodoDesc}
-                    
                 />
                 <Button
                     fullWidth
