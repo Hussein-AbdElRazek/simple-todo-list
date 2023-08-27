@@ -16,3 +16,9 @@ npm start
 ```
 
 The application will be available at `http://localhost:3000`
+
+
+## Technologies Used
+- React
+- TypeScript
+- Material UI
