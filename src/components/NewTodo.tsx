@@ -24,7 +24,7 @@ const NewTodo: React.FC = () => {
     };
     return (
         <Paper
-            sx={{ width: "70%", p: 3, marginX: "auto", mt: 5, mb: 2 }}
+            sx={{ width: "95%", p: 3, marginX: "auto", mt: 5, mb: 2 }}
             elevation={4}
         >
             <form onSubmit={handleAddTodo}>

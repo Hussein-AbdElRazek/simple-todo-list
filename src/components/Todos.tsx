@@ -8,7 +8,7 @@ const Todos: React.FC = () => {
     return (
         <Paper
             sx={{
-                width: "70%",
+                width: "95%",
                 p: 3,
                 marginX: "auto",
                 mt: 5,
